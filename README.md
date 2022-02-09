@@ -8,6 +8,9 @@ Notes:
 	Website that allows users to create accounts to buy from a selection of restaurants
 	using admin login 'user: ethan, password: ethan', restaurants can be created and edited.
 	User page contains user order data, and admin stats page contains restaurant order data.
+	
+	Installing dependencies required Node.js
+	Database requires mongodb
 
 Instructions:
 
