@@ -1,4 +1,4 @@
-#Lord of the Restaurants
+# Lord of the Restaurants
 
 ![Alt Text](https://github.com/Ewashere0/Restaurant-Website/blob/main/screenshots/Screenshot%202022-02-09%20093408.png?raw=true)
 
