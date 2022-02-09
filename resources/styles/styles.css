@@ -1,0 +1,408 @@
+/*inline comments are just things I had trouble with
+so I can find them when I'm stuck again :/        */
+
+/*styling on main 3 divs *************************************/
+
+.MainDivs{
+    float: left; /*side by side divs*/
+    vertical-align: top;
+    padding-top: 25px;
+}
+
+.MainDivs h3{
+    color: #facfbb;
+}
+
+#info{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+#info h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+#info h3{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#newElements{
+    margin-top: 50px;
+}
+
+#link{
+    width: min-content;
+    padding-left: 10px;
+    line-height: 25px;
+    text-align: left;
+}
+
+#link li{
+    list-style: none;
+    margin: 0 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#link li a{
+    text-decoration: none;
+    color: #facfbb;
+    text-transform: uppercase;
+    width: max-content;
+    display: inline-block;
+}
+
+#link li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fcebe3;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    bottom: 2px;
+    transition: 0.5s;
+}
+
+#link li:hover::after{
+    width: 100%;
+}
+
+#menu{
+    width: 57%;
+    min-width: 280px;
+}
+
+#menu h3{
+    margin-left: 10%;
+    padding-bottom: 5px;
+}
+
+#order{
+    min-width: 170px;
+    float: none; /*take up ramaining space thing*/
+    overflow: hidden;
+    font-weight: bold;
+}
+
+/*************************************************************/
+/*styling on divs within menu and buttons */
+
+.Item{
+    padding-left: 20%;
+    margin: 0px;
+    word-wrap: break-word;
+    max-width: 80%; /*80% of only the PARENT container*/
+}
+
+.OrderItem{
+    margin: 0px;
+    margin-left: 20%;
+    word-wrap: break-word;
+    float: left;
+}
+
+.PriceItem{
+    float: right;
+    margin: 0px;
+    margin-right: 5%;
+}
+
+button{
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 15px 5%;
+    padding: 3px 9px;
+    float: right;
+    color: #fcebe3;
+    transition: 0.5s;
+    text-transform: none;
+    overflow: visible;
+    text-align: center;
+}
+
+select{
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 15px 5%;
+    padding: 3px 9px;
+    color: #fcebe3;
+    transition: 0.5s;
+    text-transform: none;
+}
+
+select:hover{
+    border-color: #facfbb;
+    box-shadow: inset 0 28px 0 0 #facfbb;
+    color: #fff;
+}
+
+option{
+    color: #000000;
+}
+
+button:hover, button:focus{
+    border-color: #facfbb;
+    color: #fff;
+    box-shadow: inset 8em 0 0 0 #facfbb;
+}
+
+.AddButton{
+    width: 22px;
+    float: right; /*float right within PARENT container*/
+    vertical-align: top;
+    filter: contrast(0%);
+    transition: 0.3s;
+}
+
+.AddButton:hover, .AddButton:focus{
+    width: 28px;
+    filter: contrast(100%);
+}
+
+.RemoveButton{
+    width: 18px;
+    float: right; /*float right within PARENT container*/
+    vertical-align: top;
+    margin-right: 5%;
+    transition: 0.3s;
+    filter: contrast(0%);
+}
+
+.RemoveButton:hover, .RemoveButton:focus{
+    width: 22px;
+    filter: contrast(100%);
+}
+
+.ItemDiv{
+    padding-bottom: 10px;
+}
+
+.RestoInfo{
+    margin: 0px;
+}
+
+.ItemName{
+    display:inline-block; /*size the same as content*/
+    font-weight: bold;
+}
+
+/**************************************************************/
+/*styling by element type**************************************/
+
+html{
+    scroll-behavior: smooth; /*cool scroll thing*/
+}
+
+/**************************************************************/
+/***********************************/
+/*styles for header and background page*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/background.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fcebe3;
+}
+
+.background-loop{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(/background-loop.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fcebe3;
+}
+
+.header{
+    width: 85%;
+    margin: auto;
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 25px;
+}
+
+.header ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: #fcebe3;
+    text-transform: uppercase;
+}
+
+.header ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fac0a5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    bottom: 0px;
+    transition: 0.5s;
+}
+
+.header ul li:hover::after{
+    width: 100%;
+}
+
+/***********************************/
+/*styles for home page*/
+
+.description{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fcebe3;
+}
+
+.description h1{
+    font-size: 60px;
+    margin-top: 25px;
+}
+
+.description p{
+    margin: 20px auto;
+    line-height: 25px;
+    max-width: 677px;
+}
+
+/***********************************/
+/*styles for stats page*/
+
+.background h1{
+    font-size: 60px;
+    text-align: center;
+    color: #fcebe3;
+    margin-top: 15px;
+}
+
+.stats{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    color: #fcebe3;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    place-items: center;
+    line-height: 25px;
+    margin-top: 15px;
+}
+
+.stats h3{
+    line-height: 35px;
+}
+
+.container{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/* new pages from a3 */
+.editInput{
+    color: #facfbb;
+    background: none;
+    border: 2px solid;
+    height: 25px;   
+    padding-left: 8px;
+    margin-bottom: 15px;
+}
+
+.maininfo{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.maininfo div{
+    margin: 0 20px;
+}
+.maininfo input{
+    width: 100%;
+}
+
+/* slider button */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 23px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #facfbb;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}

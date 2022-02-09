@@ -1,0 +1,10 @@
+if selfpage 
+    p Private profile 
+    label(class='switch')
+        input(id='private', type='checkbox', checked=user.privacy)
+        span(class='slider')
+
+    script. 
+            let user = !{JSON.stringify(user)};
+    script 
+        include ../../scripts/setPrivacy.js

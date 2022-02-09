@@ -1,0 +1,20 @@
+html
+    head
+        title Lord of the Restaurants
+    style
+        include ../../styles/styles.css
+    body(class="background")
+        include layout
+        div(class='description')
+            h2 Order from #{restaurant} placed by #{username}
+            br
+
+            ul(style='margin:auto; margin-bottom:10px; width:85%')
+                each frequency, item in items 
+                    li(style='line-height: 25px; display:inline-block; margin:0 20px')
+                        h4 #{frequency} #{item}
+
+            h3 Subtotal: #{subtotal}
+            h3 Delivery: #{delivery}
+            h3 Tax: #{tax}
+            h3 Total: #{total}

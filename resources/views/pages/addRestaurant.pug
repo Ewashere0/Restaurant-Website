@@ -1,0 +1,29 @@
+html
+    head
+        title Lord of the Restaurants
+        style
+            include ../../styles/styles.css
+    body(class="background")
+        include layout
+        div(style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);')
+            p Restaurant Name
+            input(type='textbox', id='name', size='40', class='editInput')
+            br
+
+            p Delivery Fee
+            input(type='textbox', id='fee', size='40', class='editInput')
+            br
+
+            p Minimum Order
+            input(type='textbox', id='min', size='40', class='editInput')
+            br
+
+            button(id='submit') Submit
+
+        script. 
+            const id = !{JSON.stringify(nextid)}; 
+        script
+            include ../../scripts/addRestaurant.js
+
+
+		

@@ -1,0 +1,15 @@
+html
+	head
+		title Lord of the Restaurants
+		style
+			include ../../styles/styles.css
+	body(class="background-loop")
+		include layout
+		br
+		div(id="info")
+		div(id='newElements')
+
+		script.
+			const restaurant = !{JSON.stringify(resto)};
+		script
+			include ../../scripts/order.js

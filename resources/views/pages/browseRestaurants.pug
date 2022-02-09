@@ -1,0 +1,15 @@
+html
+    head
+        title Lord of the Restaurants
+        style
+            include ../../styles/styles.css
+    body(class="background")
+        include layout
+        div
+            ul(id='link', class='MainDivs', style='font-size:25px; line-height:35px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;')
+                each restaurant in restaurants 
+                    li
+                        a(href='/restaurants/'+restaurant.id) #{restaurant.name}
+
+
+		

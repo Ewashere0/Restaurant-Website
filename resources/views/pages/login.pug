@@ -1,0 +1,20 @@
+html
+    head
+        title Lord of the Restaurants
+        style
+            include ../../styles/styles.css
+    body(class="background")
+        include layout
+        div(style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;')
+            h2 Username
+            input(type='textbox', id='username', class='editInput')
+            br
+
+            h2 Password
+            input(type='textbox', id='password', class='editInput')
+            br
+
+            button(id='login') Login
+
+        script
+            include ../../scripts/login.js

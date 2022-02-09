@@ -1,0 +1,19 @@
+html
+    head
+        title Lord of the Restaurants
+        style
+            include ../../styles/styles.css
+    body(class="background")
+        include layout
+
+        br
+        ul(id='link', style='font-size:20px; line-height:30px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;')
+            h2(style='margin-bottom:25px; white-space:nowrap') #{user.username}
+            h3(style='margin-bottom:5px; white-space:nowrap') Order History 
+            each order in user.orders
+                li
+                    a(href='/orders/' + order) #{order}
+
+            br
+            br
+            include ../partials/privacy

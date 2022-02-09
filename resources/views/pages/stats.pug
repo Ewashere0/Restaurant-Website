@@ -1,0 +1,21 @@
+html
+	head
+		title Our Statistics
+		style
+			include ../../styles/styles.css
+	body
+		div(class="background")
+			include layout
+			div(class = "container")
+				h1 Our Statistics
+				div(class="stats")
+					div(id='restaurants')
+						h3 Restaurant 
+					div(id='numOrders')
+						h3 # Orders
+					div(id='avgOrder')
+						h3 Avg. Order
+					div(id='popular')
+						h3 Popular Item
+					script
+						include ../../scripts/stats.js

@@ -1,0 +1,81 @@
+html
+    head
+        title Lord of the Restaurants
+        style
+            include ../../styles/styles.css
+    body(class="background-loop")
+        include layout
+        div(id='restoinfo')
+            div(class = 'maininfo')
+                div
+                    p Restaurant Name
+                    input(type='textbox', id='name', size='40', value=resto.name, class='editInput')
+                    br
+                div
+                    p Delivery Fee
+                    input(type='textbox', id='fee', size='40', value=resto.delivery_fee, class='editInput')
+                    br
+
+                div
+                    p Minimum Order
+                    input(type='textbox', id='min', size='40', value=resto.min_order, class='editInput')
+                br
+                br
+                br
+            div(class = 'maininfo')
+                div
+                    button(id='addCat', style='width:max-content; margin-bottom: 13px') Add Category
+                    br
+                div 
+                    p Select Category
+                    select(id='catSelect', style='margin: 0px; margin-bottom: 15px;')
+                        each val, key in resto.menu 
+                            option #{key}
+                div
+                    p Category Name
+                    input(type='textbox', id='catName', size='40', class='editInput')   
+            
+            br
+            br
+            br
+            br
+            div(class = 'maininfo', )
+                div
+                    button(id='addItem', style='width:max-content; margin-bottom: 13px') Add Item
+                div
+                    p Item Name
+                    input(type='textbox', id='itemName', size='40', class='editInput')
+                div
+                    p Item Description
+                    input(type='textbox', id='itemDescription', size='40', class='editInput')
+                div
+                    p Item Price
+                    input(type='textbox', id='itemPrice', size='40', class='editInput')
+            br
+            br
+            button(id='submit') Save Changes
+            h1(style='color: #facfbb; margin-left: 10px') Menu 
+            br
+            div(id='menu', class='MainDivs', style='padding-top: 0px')
+                each category, categorykey in resto.menu 
+                    div(id=categorykey)
+                        h3 #{categorykey}
+                        br
+                        each item, itemkey in category 
+                            -price = item.price.toFixed(2);
+                            p(class='Item ItemName') #{item.name} ($#{price}) id(#{itemkey})
+                            p(class='Item') #{item.description}
+                            br
+                    br
+                    br
+
+
+
+            
+
+        script. 
+            let restaurant = !{JSON.stringify(resto)};
+        script  
+            include ../../scripts/editRestaurant.js
+            
+            
