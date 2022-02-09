@@ -26,6 +26,7 @@ Instructions:
 
 
 File structure:
+
 	server{
 		images{
 			add.png
