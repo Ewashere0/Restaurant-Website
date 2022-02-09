@@ -1,4 +1,13 @@
-Assignment 4 - Ethan Doherty - 101200654 - 2021-12-09
+#Lord of the Restaurants
+
+![Alt Text](https://github.com/Ewashere0/Restaurant-Website/blob/main/screenshots/Screenshot%202022-02-09%20093408.png?raw=true)
+
+[Website link](https://serene-plateau-76113.herokuapp.com/stats)
+
+Notes:
+	Website that allows users to create accounts to buy from a selection of restaurants
+	using admin login 'user: ethan, password: ethan', restaurants can be created and edited.
+	User page contains user order data, and admin stats page contains restaurant order data.
 
 Instructions:
 
@@ -77,11 +86,4 @@ File structure:
 	database-initializer.js //for loading some users into the db
 	package.json //for installing node modules and other information
 	README.txt //have I been here before?
-
-		
-
-Notes:
-	Website that allows users to create accounts to buy from a selection of restaurants
-	using admin login 'user: ethan, password: ethan', restaurants can be created and edited.
-	User page contains user order data, and admin stats page contains restaurant order data.
 			
