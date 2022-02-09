@@ -2,7 +2,7 @@
 
 ![Alt Text](https://github.com/Ewashere0/Restaurant-Website/blob/main/screenshots/Screenshot%202022-02-09%20093408.png?raw=true)
 
-[Website link](https://serene-plateau-76113.herokuapp.com/stats)
+[Website link](https://serene-plateau-76113.herokuapp.com)
 
 Notes:
 	Website that allows users to create accounts to buy from a selection of restaurants
